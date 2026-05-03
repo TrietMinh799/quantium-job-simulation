@@ -15,5 +15,4 @@ data.drop(columns=["price", "quantity"], inplace=True)
 data.drop("product", axis=1, inplace=True)
 data = data.iloc[:, [2, 0, 1]]
 
-print(data.head())
 data.to_csv("./formatted.csv", index=False)
