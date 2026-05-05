@@ -4,7 +4,7 @@ from process import data
 
 app = Dash()
 
-fig = px.bar(data, x="date", y="sales", title="Pink Morsel Sales over Time")
+fig = px.line(data, x="date", y="sales", title="Pink Morsel Sales over Time")
 list_options = [
     {"label": region, "value": region} for region in data["region"].unique()
 ]
@@ -39,7 +39,7 @@ def update_graph(selected_region):
         filtered_data = data
     else:
         filtered_data = data[data["region"] == selected_region]
-    fig = px.bar(
+    fig = px.line(
         filtered_data,
         x="date",
         y="sales",
