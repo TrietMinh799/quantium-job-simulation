@@ -1,5 +1,5 @@
 from dash import dcc, html
-from app import app
+from index import app
 
 
 def test_header_layout():
