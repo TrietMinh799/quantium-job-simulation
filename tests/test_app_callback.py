@@ -1,8 +1,5 @@
-from asyncio import graph
-
-from dash import dash, dcc, html
-from app import update_graph, app, data
-import plotly.graph_objects as go
+from dash import dcc, html
+from app import app
 
 
 def test_header_layout():
