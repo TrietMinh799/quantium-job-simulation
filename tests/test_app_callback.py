@@ -1,5 +1,10 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from dash import dcc, html
-from ..index import app
+from index import app
 
 
 def test_header_layout():
